@@ -7,11 +7,15 @@ function mostrarPrecioConDescuento() {
   const inputDescuento = document.getElementById("input-discount");
   const textResultado = document.getElementById("answer");
 
-  let resultado = calcularPrecioConDescuento(
-    inputPrecio.value,
-    inputDescuento.value
-  );
-  resultado = Math.round((resultado + Number.EPSILON) * 100) / 100;
+  if (inputPrecio.value != 0 && inputDescuento.value != 0) {
+    let resultado = calcularPrecioConDescuento(
+      inputPrecio.value,
+      inputDescuento.value
+    );
+    resultado = Math.round((resultado + Number.EPSILON) * 100) / 100;
 
-  textResultado.innerHTML = `Tu precio con descuento es de <span>$${resultado}</span>`;
+    textResultado.innerHTML = `Resultado final: <span>$${resultado}</span>`;
+  } else {
+    textResultado.innerHTML = `Faltan datos ❗❗`;
+  }
 }

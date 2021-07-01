@@ -189,8 +189,9 @@ main {
 }
 .answer-container p {
   padding: 20px;
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 footer {

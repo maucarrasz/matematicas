@@ -147,6 +147,7 @@ main .box {
   text-align: center;
   line-height: 2.4rem;
   padding: 10px;
+  font-weight: bold;
 }
 .answer-text span {
   font-size: 105%;

@@ -27,25 +27,27 @@ const btnCuadradoPerimetro = document.getElementById(
   "calcular-perimetro-cuadrado"
 );
 const btnCuadradoArea = document.getElementById("calcular-area-cuadrado");
-
-btnCuadradoPerimetro.addEventListener("click", mostrarPerimetroCuadrado);
-btnCuadradoArea.addEventListener("click", mostrarAreaCuadrado);
+const resultadoCuadrado = document.getElementById("respuesta-cuadrado");
 
 function mostrarPerimetroCuadrado() {
-  let perimetroCuadrado = calcularPerimetroCuadrado(inputLadoCuadrado.value);
-  perimetroCuadrado =
-    Math.round((perimetroCuadrado + Number.EPSILON) * 100) / 100;
-  console.log(perimetroCuadrado);
-  document.getElementById(
-    "respuesta-cuadrado"
-  ).innerHTML = `${perimetroCuadrado}cm`;
+  if (inputLadoCuadrado.value != 0) {
+    let perimetroCuadrado = calcularPerimetroCuadrado(inputLadoCuadrado.value);
+    perimetroCuadrado =
+      Math.round((perimetroCuadrado + Number.EPSILON) * 100) / 100;
+    console.log(perimetroCuadrado);
+    resultadoCuadrado.innerHTML = `${perimetroCuadrado}cm`;
+  } else {
+    resultadoCuadrado.innerHTML = `Faltan datos 😕`;
+  }
 }
 function mostrarAreaCuadrado() {
-  let areaCuadrado = calcularAreaCuadrado(inputLadoCuadrado.value);
-  areaCuadrado = Math.round((areaCuadrado + Number.EPSILON) * 100) / 100;
-  document.getElementById(
-    "respuesta-cuadrado"
-  ).innerHTML = `${areaCuadrado}cm <sup>2</sup>`;
+  if (inputLadoCuadrado.value != 0) {
+    let areaCuadrado = calcularAreaCuadrado(inputLadoCuadrado.value);
+    areaCuadrado = Math.round((areaCuadrado + Number.EPSILON) * 100) / 100;
+    resultadoCuadrado.innerHTML = `${areaCuadrado}cm <sup>2</sup>`;
+  } else {
+    resultadoCuadrado.innerHTML = `Faltan datos 😕`;
+  }
 }
 
 // Area y Perímetro del Triángulo -----------------------------
@@ -58,34 +60,37 @@ const btnTrianguloPerimetro = document.getElementById(
   "calcular-perimetro-triangulo"
 );
 const btnTrianguloArea = document.getElementById("calcular-area-triangulo");
-
-btnTrianguloPerimetro.addEventListener("click", mostrarPerimetroTriangulo);
-btnTrianguloArea.addEventListener("click", mostrarAreaTriangulo);
+const resultadoTriangulo = document.getElementById("respuesta-triangulo");
 
 function mostrarPerimetroTriangulo() {
-  let perimetroTriangulo = calcularPerimetroTriangulo(
-    Number(inputLadoUnoTriangulo.value),
-    Number(inputLadoDosTriangulo.value),
-    Number(inputBaseTriangulo.value)
-  );
-  perimetroTriangulo =
-    Math.round((perimetroTriangulo + Number.EPSILON) * 100) / 100;
-
-  console.log(perimetroTriangulo);
-  document.getElementById(
-    "respuesta-triangulo"
-  ).innerHTML = `${perimetroTriangulo}cm`;
+  if (
+    inputLadoUnoTriangulo.value != 0 &&
+    inputLadoDosTriangulo.value != 0 &&
+    inputBaseTriangulo.value != 0
+  ) {
+    let perimetroTriangulo = calcularPerimetroTriangulo(
+      Number(inputLadoUnoTriangulo.value),
+      Number(inputLadoDosTriangulo.value),
+      Number(inputBaseTriangulo.value)
+    );
+    perimetroTriangulo =
+      Math.round((perimetroTriangulo + Number.EPSILON) * 100) / 100;
+    resultadoTriangulo.innerHTML = `${perimetroTriangulo}cm`;
+  } else {
+    resultadoTriangulo.innerHTML = `Faltan datos 😕`;
+  }
 }
 function mostrarAreaTriangulo() {
-  let areaTriangulo = calcularAreaTriangulo(
-    inputBaseTriangulo.value,
-    inputAlturaTriangulo.value
-  );
-  areaTriangulo = Math.round((areaTriangulo + Number.EPSILON) * 100) / 100;
-
-  document.getElementById(
-    "respuesta-triangulo"
-  ).innerHTML = `${areaTriangulo}cm<sup>2</sup>`;
+  if (inputBaseTriangulo.value != 0 && inputAlturaTriangulo.value != 0) {
+    let areaTriangulo = calcularAreaTriangulo(
+      inputBaseTriangulo.value,
+      inputAlturaTriangulo.value
+    );
+    areaTriangulo = Math.round((areaTriangulo + Number.EPSILON) * 100) / 100;
+    resultadoTriangulo.innerHTML = `${areaTriangulo}cm<sup>2</sup>`;
+  } else {
+    resultadoTriangulo.innerHTML = `Faltan datos 😕`;
+  }
 }
 
 // Area y Perímetro del Circulo -----------------------------
@@ -95,23 +100,25 @@ const btnCirculoPerimetro = document.getElementById(
   "calcular-perimetro-circulo"
 );
 const btnCirculoArea = document.getElementById("calcular-area-circulo");
-
-btnCirculoPerimetro.addEventListener("click", mostrarPerimetroCirculo);
-btnCirculoArea.addEventListener("click", mostrarAreaCirculo);
+const resultadoCirculo = document.getElementById("respuesta-circulo");
 
 function mostrarPerimetroCirculo() {
-  let perimetroCirculo = calcularPerimetroCirculo(inputRadioCirculo.value);
-  perimetroCirculo =
-    Math.round((perimetroCirculo + Number.EPSILON) * 100) / 100;
-  console.log(perimetroCirculo);
-  document.getElementById(
-    "respuesta-circulo"
-  ).innerHTML = `${perimetroCirculo}cm`;
+  if (inputRadioCirculo.value != 0) {
+    let perimetroCirculo = calcularPerimetroCirculo(inputRadioCirculo.value);
+    perimetroCirculo =
+      Math.round((perimetroCirculo + Number.EPSILON) * 100) / 100;
+    console.log(perimetroCirculo);
+    resultadoCirculo.innerHTML = `${perimetroCirculo}cm`;
+  } else {
+    resultadoCirculo.innerHTML = `Faltan datos 😕`;
+  }
 }
 function mostrarAreaCirculo() {
-  let areaCirculo = calcularAreaCirculo(inputRadioCirculo.value);
-  areaCirculo = Math.round((areaCirculo + Number.EPSILON) * 100) / 100;
-  document.getElementById(
-    "respuesta-circulo"
-  ).innerHTML = `${areaCirculo}cm<sup>2</sup>`;
+  if (inputRadioCirculo.value != 0) {
+    let areaCirculo = calcularAreaCirculo(inputRadioCirculo.value);
+    areaCirculo = Math.round((areaCirculo + Number.EPSILON) * 100) / 100;
+    resultadoCirculo.innerHTML = `${areaCirculo}cm<sup>2</sup>`;
+  } else {
+    resultadoCirculo.innerHTML = `Faltan datos 😕`;
+  }
 }
