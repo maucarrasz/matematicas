@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "DM Sans", sans-serif;
+  background-color: #f2f0f0;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+/* Exponente */
+sup {
+  font-size: 2rem;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 1rem;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-container img {
+  height: 80px;
+}
+
+.logo-container p {
+  font-size: 2.6rem;
+  font-family: "Rakkas", cursive;
+}
+
+header ul {
+  display: flex;
+  margin: 10px;
+  font-size: 1.6rem;
+  list-style: none;
+}
+header ul li {
+  margin: 5px 10px;
+  padding: 5px 0;
+  font-size: 1.8rem;
+}
+
+/* Animation - appear vertical line */
+header ul li {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+header li:hover {
+  background-size: 100% 2px;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 120px);
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+
+  position: relative;
+}
+
+.section {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  padding-top: 5px;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  padding: 0 15px;
+  border-bottom: 3px solid black;
+  font-size: 2.8rem;
+  font-family: "Rakkas", cursive;
+}
+.section-triangulo h2 {
+  margin-bottom: 20px;
+}
+
+.section img {
+  width: 180px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.section-cuadrado img {
+  width: 170px;
+  margin-bottom: 25px;
+}
+
+.input-btn-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+/* Para igualar la alineacion con el triangulo */
+.input-btn-container--cuadrado {
+  margin-top: 18px;
+}
+.input-btn-container--circulo {
+  margin-top: 23px;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+.input-container input {
+  color: black;
+  font-size: 1.4rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 4px 8px;
+  margin-bottom: 5px;
+}
+.input-container .input-cuadrado,
+.input-container .input-circulo {
+  position: relative;
+  top: -14px;
+}
+
+::placeholder {
+  color: black;
+  position: absolute;
+  left: 10px;
+}
+
+.input-container__triangulo {
+  max-width: 235px;
+}
+
+.input-container__triangulo input {
+  width: 40%;
+}
+
+.btn-container button {
+  width: 10rem;
+  padding: 6.5px;
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 2px solid black;
+  border-radius: 20px;
+  outline: none;
+}
+.btn-container button:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.answer-container {
+  width: 200px;
+  height: 120px;
+  border: 6px solid black;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.answer-container p {
+  padding: 20px;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.author {
+  color: black;
+  font-size: 1.6rem;
+  font-family: "Rakkas", cursive;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+.author a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 5px;
+}

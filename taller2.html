@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taller 2 | Precios y descuentos</title>
+    <link rel="stylesheet" href="./styles/taller2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="./src/logo-precio.png" alt="" class="logo" />
+        <p>Precios y descuentos</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./taller1.html">Taller #1</a></li>
+          <li><a href="./taller2.html">Taller #2</a></li>
+          <li><a href="./taller3.html">Taller #3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="box">
+        <img src="./src/precio-descuento.png" alt="Imagen descuento" />
+        <form class="form-container">
+          <label for="price">¿Cuál es el precio?</label>
+          <input type="number" name="price" id="input-price" class="input" />
+          <label for="discount">¿Cuál es el descuento? (en %)</label>
+          <input
+            type="number"
+            name="discount"
+            id="input-discount"
+            class="input"
+          />
+          <button
+            type="button"
+            class="btn"
+            onclick="mostrarPrecioConDescuento()"
+          >
+            Calcular
+          </button>
+        </form>
+        <div class="answer-container">
+          <p class="answer-text" id="answer">Tu resultado saldrá aquí 😉</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="author">
+        Designed by
+        <a href="https://github.com/Mauricio2802">@maurice_cl42</a> with 💚
+      </div>
+    </footer>
+    <script src="./scripts/taller2.js"></script>
+  </body>
+</html>
