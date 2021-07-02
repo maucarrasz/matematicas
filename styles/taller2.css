@@ -183,3 +183,19 @@ footer {
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 5px;
 }
+
+.msg-coupon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 6px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  border: 0.5px solid rgba(0, 128, 0, 0.87);
+  color: rgba(0, 128, 0, 0.87);
+  background-color: yellow;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
