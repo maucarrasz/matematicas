@@ -65,7 +65,7 @@ header ul li:hover {
 
 main {
   width: 100%;
-  height: calc(100vh - 120px);
+  /* height: calc(100vh - 120px); */
 
   display: flex;
   justify-content: center;
@@ -83,6 +83,8 @@ main .box {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
 }
 
 .box img {
@@ -109,6 +111,14 @@ main .box {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.4);
   padding: 4px 8px;
+}
+.cupon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+::placeholder {
+  font-size: 1.5rem;
 }
 
 .btn {

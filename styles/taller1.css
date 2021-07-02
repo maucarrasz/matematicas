@@ -68,7 +68,7 @@ header li:hover {
 
 main {
   width: 100%;
-  height: calc(100vh - 120px);
+  /* height: calc(100vh - 120px); */
   font-size: 1.6rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

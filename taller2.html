@@ -40,11 +40,17 @@
             id="input-discount"
             class="input"
           />
-          <button
-            type="button"
-            class="btn"
-            onclick="mostrarPrecioConDescuento()"
-          >
+          <div class="cupon-container">
+            <label for="coupon">Cupón: </label>
+            <input
+              type="text"
+              name="coupon"
+              id="input-coupon"
+              class="input"
+              placeholder="Ejm: 'Platzi'"
+            />
+          </div>
+          <button type="button" class="btn" onclick="mostrarNuevoPrecio()">
             Calcular
           </button>
         </form>
