@@ -2,3 +2,4 @@
 ### - Geometric Figures 🔳 📐 
 ### - Price with discount (and coupon) 💲
 
+See the proyect: https://mauricio2802.github.io/matematicas/ 
