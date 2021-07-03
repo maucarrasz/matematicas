@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyect 3 | Simple and Compound Interest</title>
+    <link rel="stylesheet" href="./styles/taller3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="./src/logo-inversion.jpg" alt="" class="logo" />
+        <p>UInvestment</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Proyect 1</a></li>
+          <li><a href="./taller2.html">Proyect 2</a></li>
+          <li><a href="./taller3.html">Proyect 3</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="box">
+        <div class="box-content">
+          <div class="title">
+            <p class="title-text">Know your investment</p>
+          </div>
+          <form class="form-container">
+            <div class="group-container">
+              <div class="group-left">
+                <div class="label-input-container">
+                  <label for="amount">What's the investment amount? </label>
+                  <input
+                    type="number"
+                    name="amount"
+                    id="input-amount"
+                    class="input"
+                  />
+                </div>
+                <div class="label-input-container">
+                  <label for="time">What's the time lapse in years? </label>
+                  <input
+                    type="number"
+                    name="time"
+                    id="input-time"
+                    class="input"
+                  />
+                </div>
+              </div>
+              <div class="group-right">
+                <div class="label-input-container">
+                  <label for="interest"
+                    >What's the yearly interest? (on %)</label
+                  >
+                  <input
+                    type="text"
+                    name="interest"
+                    id="input-interest"
+                    class="input"
+                  />
+                </div>
+                <div class="label-input-container">
+                  <label for="type-interest">What kind of interest?</label>
+                  <select name="type-interest" id="type-interest" class="input">
+                    <option value="simple">Simple</option>
+                    <option value="compound">Compound</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="btn-container">
+              <button
+                type="button"
+                class="btn btn-calculate"
+                onclick="mostrarMontoInversion()"
+              >
+                Calculate
+              </button>
+              <button type="button" class="btn btn-reset" onclick="reset()">
+                Reset
+              </button>
+            </div>
+          </form>
+          <div class="answer-container">
+            <p class="answer-text" id="answer">Final investment</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="author">
+        Designed by
+        <a href="https://github.com/Mauricio2802">@maurice_cl42</a> with 💚
+      </div>
+    </footer>
+    <script src="./scripts/funciones.js"></script>
+    <script src="./scripts/taller3.js"></script>
+  </body>
+</html>

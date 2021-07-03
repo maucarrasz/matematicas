@@ -32,21 +32,20 @@ const resultadoCuadrado = document.getElementById("respuesta-cuadrado");
 function mostrarPerimetroCuadrado() {
   if (inputLadoCuadrado.value != 0) {
     let perimetroCuadrado = calcularPerimetroCuadrado(inputLadoCuadrado.value);
-    perimetroCuadrado =
-      Math.round((perimetroCuadrado + Number.EPSILON) * 100) / 100;
+    perimetroCuadrado = redondeoAlCentesimo(perimetroCuadrado);
     console.log(perimetroCuadrado);
     resultadoCuadrado.innerHTML = `${perimetroCuadrado}cm`;
   } else {
-    resultadoCuadrado.innerHTML = `Faltan datos 😕`;
+    resultadoCuadrado.innerHTML = `Missing data 😕`;
   }
 }
 function mostrarAreaCuadrado() {
   if (inputLadoCuadrado.value != 0) {
     let areaCuadrado = calcularAreaCuadrado(inputLadoCuadrado.value);
-    areaCuadrado = Math.round((areaCuadrado + Number.EPSILON) * 100) / 100;
+    areaCuadrado = redondeoAlCentesimo(areaCuadrado);
     resultadoCuadrado.innerHTML = `${areaCuadrado}cm <sup>2</sup>`;
   } else {
-    resultadoCuadrado.innerHTML = `Faltan datos 😕`;
+    resultadoCuadrado.innerHTML = `Missing data 😕`;
   }
 }
 
@@ -73,11 +72,10 @@ function mostrarPerimetroTriangulo() {
       Number(inputLadoDosTriangulo.value),
       Number(inputBaseTriangulo.value)
     );
-    perimetroTriangulo =
-      Math.round((perimetroTriangulo + Number.EPSILON) * 100) / 100;
+    perimetroTriangulo = redondeoAlCentesimo(perimetroTriangulo);
     resultadoTriangulo.innerHTML = `${perimetroTriangulo}cm`;
   } else {
-    resultadoTriangulo.innerHTML = `Faltan datos 😕`;
+    resultadoTriangulo.innerHTML = `Missing data 😕`;
   }
 }
 function mostrarAreaTriangulo() {
@@ -86,10 +84,10 @@ function mostrarAreaTriangulo() {
       inputBaseTriangulo.value,
       inputAlturaTriangulo.value
     );
-    areaTriangulo = Math.round((areaTriangulo + Number.EPSILON) * 100) / 100;
+    areaTriangulo = redondeoAlCentesimo(areaTriangulo);
     resultadoTriangulo.innerHTML = `${areaTriangulo}cm<sup>2</sup>`;
   } else {
-    resultadoTriangulo.innerHTML = `Faltan datos 😕`;
+    resultadoTriangulo.innerHTML = `Missing data 😕`;
   }
 }
 
@@ -105,20 +103,19 @@ const resultadoCirculo = document.getElementById("respuesta-circulo");
 function mostrarPerimetroCirculo() {
   if (inputRadioCirculo.value != 0) {
     let perimetroCirculo = calcularPerimetroCirculo(inputRadioCirculo.value);
-    perimetroCirculo =
-      Math.round((perimetroCirculo + Number.EPSILON) * 100) / 100;
+    perimetroCirculo = redondeoAlCentesimo(perimetroCirculo);
     console.log(perimetroCirculo);
     resultadoCirculo.innerHTML = `${perimetroCirculo}cm`;
   } else {
-    resultadoCirculo.innerHTML = `Faltan datos 😕`;
+    resultadoCirculo.innerHTML = `Missing data 😕`;
   }
 }
 function mostrarAreaCirculo() {
   if (inputRadioCirculo.value != 0) {
     let areaCirculo = calcularAreaCirculo(inputRadioCirculo.value);
-    areaCirculo = Math.round((areaCirculo + Number.EPSILON) * 100) / 100;
+    areaCirculo = redondeoAlCentesimo(areaCirculo);
     resultadoCirculo.innerHTML = `${areaCirculo}cm<sup>2</sup>`;
   } else {
-    resultadoCirculo.innerHTML = `Faltan datos 😕`;
+    resultadoCirculo.innerHTML = `Missing data 😕`;
   }
 }

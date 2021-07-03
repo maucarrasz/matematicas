@@ -22,7 +22,7 @@ function mostrarNuevoPrecio() {
       userInputCupon = userInputCupon.toLowerCase();
       // Validar cual cupon es
       if (!coupons.includes(userInputCupon)) {
-        alert(`El cupon "${userInputCupon}" no es válido`);
+        alert(`The coupon "${userInputCupon}" is invalid`);
       } else if (userInputCupon === coupons[0]) {
         cuponValue = 5;
       } else if (userInputCupon === coupons[1]) {
@@ -38,9 +38,9 @@ function mostrarNuevoPrecio() {
     } else {
       resultado = calcularPrecioConDescuento(precioValue, descuentoValue);
     }
-    resultado = Math.round((resultado + Number.EPSILON) * 100) / 100;
-    textResultado.innerHTML = `Resultado final: <span>$${resultado}</span>`;
+    resultado = redondeoAlCentesimo(resultado);
+    textResultado.innerHTML = `Final score: <span>$${resultado}</span>`;
   } else {
-    textResultado.innerHTML = `Faltan datos ❗❗`;
+    textResultado.innerHTML = `Missing data ❗❗`;
   }
 }
