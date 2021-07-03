@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Proyecto 2 | Precios con descuentos</title>
+    <title>Proyect 2 | Discounted prices</title>
     <link rel="stylesheet" href="./styles/taller2.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,12 +17,12 @@
     <header>
       <div class="logo-container">
         <img src="./src/logo-precio.png" alt="" class="logo" />
-        <p>Precios con descuentos</p>
+        <p>Discounted prices</p>
       </div>
       <nav>
         <ul>
-          <li><a href="./index.html">Proyecto 1</a></li>
-          <li><a href="./taller2.html">Proyecto 2</a></li>
+          <li><a href="./index.html">Proyect 1</a></li>
+          <li><a href="./taller2.html">Proyect 2</a></li>
         </ul>
       </nav>
     </header>
@@ -30,9 +30,9 @@
       <section class="box">
         <img src="./src/precio-descuento.png" alt="Imagen descuento" />
         <form class="form-container">
-          <label for="price">¿Cuál es el precio?</label>
+          <label for="price">What's the price? </label>
           <input type="number" name="price" id="input-price" class="input" />
-          <label for="discount">¿Cuál es el descuento? (en %)</label>
+          <label for="discount">What is the discount? (on %) </label>
           <input
             type="number"
             name="discount"
@@ -40,23 +40,23 @@
             class="input"
           />
           <div class="cupon-container">
-            <label for="coupon">Cupón: </label>
+            <label for="coupon">Coupon: </label>
             <input
               type="text"
               name="coupon"
               id="input-coupon"
               class="input"
-              placeholder="Ejm: 'PLATZI'"
+              placeholder="Example: 'PLATZI'"
             />
           </div>
           <button type="button" class="btn" onclick="mostrarNuevoPrecio()">
-            Calcular
+            Calculate
           </button>
         </form>
         <div class="answer-container">
-          <p class="answer-text" id="answer">Precio final</p>
+          <p class="answer-text" id="answer">Final price</p>
         </div>
-        <div class="msg-coupon">Cupón "PLATZI" ➡ +15% dscto</div>
+        <div class="msg-coupon">Coupon "PLATZI" ➡ +15% dsct</div>
       </section>
     </main>
     <footer>
