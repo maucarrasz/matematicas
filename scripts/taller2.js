@@ -5,38 +5,40 @@ function calcularConDescuentoMasCupon(precio, descuento, cupon) {
   return ((100 - descuento - cupon) / 100) * precio;
 }
 
+const coupons = ["holamundo", "enigma42", "platzi"];
+
 function mostrarNuevoPrecio() {
   const inputPrecio = document.getElementById("input-price");
   const inputDescuento = document.getElementById("input-discount");
   const inputCupon = document.getElementById("input-coupon");
   const textResultado = document.getElementById("answer");
-
-  if (inputPrecio.value != 0 && inputDescuento.value != 0) {
+  let precioValue = inputPrecio.value;
+  let descuentoValue = inputDescuento.value;
+  let userInputCupon = inputCupon.value;
+  if (precioValue != 0 && descuentoValue != 0) {
     let resultado = 0;
-    if (inputCupon.value != 0) {
-      // Validar cupon "Platzi"
-      let valorCupon = 0;
-      inputCupon.value = inputCupon.value.toLowerCase();
-      if (inputCupon.value == "platzi") {
-        valorCupon = 5;
-      } else {
-        valorCupon = 0;
+    if (userInputCupon != "") {
+      let cuponValue = 0;
+      userInputCupon = userInputCupon.toLowerCase();
+      // Validar cual cupon es
+      if (!coupons.includes(userInputCupon)) {
+        alert(`El cupon "${userInputCupon}" no es válido`);
+      } else if (userInputCupon === coupons[0]) {
+        cuponValue = 5;
+      } else if (userInputCupon === coupons[1]) {
+        cuponValue = 10;
+      } else if (userInputCupon === coupons[2]) {
+        cuponValue = 15;
       }
-      console.log(inputCupon.value);
-      console.log(valorCupon);
       resultado = calcularConDescuentoMasCupon(
-        inputPrecio.value,
-        inputDescuento.value,
-        valorCupon
+        precioValue,
+        descuentoValue,
+        cuponValue
       );
     } else {
-      resultado = calcularPrecioConDescuento(
-        inputPrecio.value,
-        inputDescuento.value
-      );
+      resultado = calcularPrecioConDescuento(precioValue, descuentoValue);
     }
     resultado = Math.round((resultado + Number.EPSILON) * 100) / 100;
-
     textResultado.innerHTML = `Resultado final: <span>$${resultado}</span>`;
   } else {
     textResultado.innerHTML = `Faltan datos ❗❗`;
