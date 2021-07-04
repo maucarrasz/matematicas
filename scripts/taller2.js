@@ -39,7 +39,7 @@ function mostrarNuevoPrecio() {
       resultado = calcularPrecioConDescuento(precioValue, descuentoValue);
     }
     resultado = redondeoAlCentesimo(resultado);
-    textResultado.innerHTML = `Final score: <span>$${resultado}</span>`;
+    textResultado.innerHTML = `Discounted price: <span>$${resultado}</span>`;
   } else {
     textResultado.innerHTML = `Missing data ❗❗`;
   }
