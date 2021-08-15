@@ -112,6 +112,16 @@ main .box {
   background: rgba(255, 255, 255, 0.4);
   padding: 4px 8px;
 }
+/* Del icons in input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .cupon-container {
   display: flex;
   justify-content: space-between;

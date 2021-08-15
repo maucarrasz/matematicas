@@ -1,25 +1,3 @@
-// Cuadrado
-function calcularPerimetroCuadrado(l) {
-  return l * 4;
-}
-function calcularAreaCuadrado(l) {
-  return l ** 2;
-}
-// Triangulo
-function calcularPerimetroTriangulo(lado1, lado2, base) {
-  return lado1 + lado2 + base;
-}
-function calcularAreaTriangulo(b, h) {
-  return (b * h) / 2;
-}
-// Circulo
-function calcularPerimetroCirculo(r) {
-  return 2 * r * Math.PI;
-}
-function calcularAreaCirculo(r) {
-  return Math.PI * r ** 2;
-}
-
 // Area y Perímetro del Cuadrado -----------------------------
 
 const inputLadoCuadrado = document.getElementById("lado-cuadrado");

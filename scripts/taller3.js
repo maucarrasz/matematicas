@@ -1,29 +1,3 @@
-function investmentWithSimpleInterest(
-  startAmount,
-  interestPercentage,
-  timeYears
-) {
-  let capital = Number(startAmount);
-  let tiempo = Number(timeYears);
-  let tasaDeInteres = Number(interestPercentage / 100);
-  // Calculamos el interes simple
-  let interesSimple = capital * tasaDeInteres * tiempo;
-  let montoFinal = capital + interesSimple;
-  return Number(montoFinal);
-}
-function investmentWithCompoundInterest(
-  startAmount,
-  interestPercentage,
-  timeYears
-) {
-  let capital = Number(startAmount);
-  let tiempo = Number(timeYears);
-  let tasaDeInteres = Number(interestPercentage / 100);
-  // Calculamos el monto final con interes compuesto
-  let montoFinal = capital * (1 + tasaDeInteres) ** tiempo;
-  return Number(montoFinal);
-}
-
 function reset() {
   const inputAmount = document.getElementById("input-amount");
   const inputInterest = document.getElementById("input-interest");

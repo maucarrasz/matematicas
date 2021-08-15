@@ -1,10 +1,3 @@
-function calcularPrecioConDescuento(precio, descuento) {
-  return ((100 - descuento) / 100) * precio;
-}
-function calcularConDescuentoMasCupon(precio, descuento, cupon) {
-  return ((100 - descuento - cupon) / 100) * precio;
-}
-
 const coupons = ["holamundo", "enigma42", "platzi"];
 
 function mostrarNuevoPrecio() {
