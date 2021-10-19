@@ -3,4 +3,4 @@
 ### - Discounted prices (and coupon) 💲
 ### - UInvestment 💹
 
-See the proyect: https://mauricio2802.github.io/matematicas/ 
+See the proyect: https://mauricodev.github.io/matematicas/ 
