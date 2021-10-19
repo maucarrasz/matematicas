@@ -1,4 +1,4 @@
-# Web page with 2 Little Proyects:
+# Web page with 3 Little Proyects:
 ### - Geometric Figures 🔳 📐 
 ### - Discounted prices (and coupon) 💲
 ### - UInvestment 💹
