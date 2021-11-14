@@ -8,11 +8,20 @@ function calcularAreaCuadrado(l) {
   return l ** 2;
 }
 // Triangulo
-function calcularPerimetroTriangulo(lado1, lado2, base) {
-  return lado1 + lado2 + base;
+function calcularPerimetroTriangulo(lado1, lado2, lado3) {
+  return lado1 + lado2 + lado3;
 }
-function calcularAreaTriangulo(b, h) {
-  return (b * h) / 2;
+// Área del circulo con la fórumla de Heron
+function semiperimetroCirculo(lado1, lado2, lado3) {
+  return (lado1 + lado2 + lado3) / 2;
+}
+function calcularAreaTriangulo(lado1, lado2, lado3) {
+  return Math.sqrt(
+    semiperimetroCirculo(lado1, lado2, lado3) *
+      (semiperimetroCirculo(lado1, lado2, lado3) - lado1) *
+      (semiperimetroCirculo(lado1, lado2, lado3) - lado2) *
+      (semiperimetroCirculo(lado1, lado2, lado3) - lado3)
+  );
 }
 // Circulo
 function calcularPerimetroCirculo(r) {
