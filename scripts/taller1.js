@@ -57,10 +57,15 @@ function mostrarPerimetroTriangulo() {
   }
 }
 function mostrarAreaTriangulo() {
-  if (inputBaseTriangulo.value != 0 && inputAlturaTriangulo.value != 0) {
+  if (
+    inputLadoUnoTriangulo.value != 0 &&
+    inputLadoDosTriangulo.value != 0 &&
+    inputBaseTriangulo.value != 0
+  ) {
     let areaTriangulo = calcularAreaTriangulo(
-      inputBaseTriangulo.value,
-      inputAlturaTriangulo.value
+      Number(inputLadoUnoTriangulo.value),
+      Number(inputLadoDosTriangulo.value),
+      Number(inputBaseTriangulo.value)
     );
     areaTriangulo = redondeoAlCentesimo(areaTriangulo);
     resultadoTriangulo.innerHTML = `${areaTriangulo}cm<sup>2</sup>`;
