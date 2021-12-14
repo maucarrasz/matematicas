@@ -14,20 +14,51 @@
     />
   </head>
   <body>
-    <header>
-      <div class="logo-container">
-        <img src="./src/logo-figuras.jpg" alt="Geometric icon" class="logo" />
-        <p>Figures</p>
-      </div>
+  <nav class="menu-mobile hidden">
+      <button>
+        <img
+          src="./src/icon_close.png"
+          alt="Close icon"
+          class="menu__close-icon"
+          id="menu-close-icon"
+        />
+      </button>
+      <ul>
+        <li class="menu__title">PROJECTS</li>
+        <li class="menu-item menu__category">
+          <a href="./taller1.html">Geometric Figures</a>
+        </li>
+        <li class="menu-item menu__category">
+          <a href="./taller2.html">Discounted Prices</a>
+        </li>
+        <li class="menu-item menu__category">
+          <a href="./taller3.html">UInvestment</a>
+        </li>
+      </ul>
+  </nav>
+  <header>
       <nav>
-        <ul>
-          <li><a href=".">Home</a></li>
-          <li><a href="./taller1.html">P1</a></li>
-          <li><a href="./taller2.html">P2</a></li>
-          <li><a href="./taller3.html">P3</a></li>
+        <ul class="navbar-list" id="navbar-list">
+          <div class="navbar__left">
+            <div class="logo-container">
+              <img src="./src/logo-figuras.jpg" alt="Geometric icon" class="logo" />
+              <p>GeoFigures</p>
+            </div>
+          </div>
+          <div class="navbar__right">
+            <ul>
+              <a href=".">Home</a></a>
+              <a href="./taller1.html">P1</a></a>
+              <a href="./taller2.html">P2</a></a>
+              <a href="./taller3.html">P3</a></a>
+            </ul>
+            <li class="menu-icon" id="menu-icon">
+              <img src="./src/icon_menu.svg" alt="menu icon" >
+            </li>
+          </div>
         </ul>
       </nav>
-    </header>
+  </header>
     <main>
       <div class="sections-container">
         <section class="section section-cuadrado">
@@ -147,6 +178,7 @@
         <a href="https://github.com/mauricodev">@mauricodev</a> with 💚
       </div>
     </footer>
+    <script src="./scripts/menuMobile.js"></script>
     <script src="./scripts/funciones.js"></script>
     <script src="./scripts/taller1.js"></script>
   </body>
