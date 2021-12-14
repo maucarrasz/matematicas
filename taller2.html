@@ -16,20 +16,24 @@
   <body>
     <header>
       <div class="logo-container">
-        <img src="./src/logo-precio.png" alt="" class="logo" />
-        <p>Discounted prices</p>
+        <img
+          src="./src/discount-store-store-svgrepo-com.svg"
+          alt="Discount store"
+          class="logo"
+        />
+        <p>Discount</p>
       </div>
       <nav>
         <ul>
-          <li><a href="./index.html">Proyect 1</a></li>
-          <li><a href="./taller2.html">Proyect 2</a></li>
-          <li><a href="./taller3.html">Proyect 3</a></li>
+          <li><a href=".">Home</a></li>
+          <li><a href="./taller1.html">P1</a></li>
+          <li><a href="./taller2.html">P2</a></li>
+          <li><a href="./taller3.html">P3</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="box">
-        <img src="./src/precio-descuento.png" alt="Imagen descuento" />
         <form class="form-container">
           <label for="price">What's the price? </label>
           <input type="number" name="price" id="input-price" class="input" />
@@ -40,16 +44,14 @@
             id="input-discount"
             class="input"
           />
-          <div class="cupon-container">
-            <label for="coupon">Coupon: </label>
-            <input
-              type="text"
-              name="coupon"
-              id="input-coupon"
-              class="input"
-              placeholder="Example: 'PLATZI'"
-            />
-          </div>
+          <label for="coupon">Coupon: </label>
+          <input
+            type="text"
+            name="coupon"
+            id="input-coupon"
+            class="input"
+            placeholder="Example: 'PLATZI'"
+          />
           <button type="button" class="btn" onclick="mostrarNuevoPrecio()">
             Calculate
           </button>
@@ -57,7 +59,9 @@
         <div class="answer-container">
           <p class="answer-text" id="answer">Final price</p>
         </div>
-        <div class="msg-coupon">Coupon "PLATZI" ➡ +15% dsct</div>
+        <div class="msg-coupon">
+          Coupon <span class="name-coupon">"PLATZI"</span> ➡ 15% dsct
+        </div>
       </section>
     </main>
     <footer>

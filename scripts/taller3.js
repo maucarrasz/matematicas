@@ -35,7 +35,7 @@ function mostrarMontoInversion() {
         tiempoValue
       );
       resultado = redondeoAlCentesimo(resultado);
-      textResultado.innerHTML = `Your investment with initial capital of $${montoValue} and simple annual interest of ${interesValue}% over ${tiempoValue} years will be <span>$${resultado}</span>`;
+      textResultado.innerHTML = `Your investment with initial capital of $${montoValue} and simple annual interest of ${interesValue}% over ${tiempoValue} years will be <span>$${resultado}</span>.`;
     }
     if (tipoInteresValue === "compound") {
       resultado = investmentWithCompoundInterest(

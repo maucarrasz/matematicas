@@ -12,7 +12,7 @@ function mostrarPerimetroCuadrado() {
     let perimetroCuadrado = calcularPerimetroCuadrado(inputLadoCuadrado.value);
     perimetroCuadrado = redondeoAlCentesimo(perimetroCuadrado);
     console.log(perimetroCuadrado);
-    resultadoCuadrado.innerHTML = `${perimetroCuadrado}cm`;
+    resultadoCuadrado.innerHTML = `<span>${perimetroCuadrado}cm</span>`;
   } else {
     resultadoCuadrado.innerHTML = `Missing data 😕`;
   }
@@ -21,7 +21,7 @@ function mostrarAreaCuadrado() {
   if (inputLadoCuadrado.value != 0) {
     let areaCuadrado = calcularAreaCuadrado(inputLadoCuadrado.value);
     areaCuadrado = redondeoAlCentesimo(areaCuadrado);
-    resultadoCuadrado.innerHTML = `${areaCuadrado}cm <sup>2</sup>`;
+    resultadoCuadrado.innerHTML = `<span>${areaCuadrado}cm<sup>2</sup></span>`;
   } else {
     resultadoCuadrado.innerHTML = `Missing data 😕`;
   }
@@ -51,7 +51,7 @@ function mostrarPerimetroTriangulo() {
       Number(inputBaseTriangulo.value)
     );
     perimetroTriangulo = redondeoAlCentesimo(perimetroTriangulo);
-    resultadoTriangulo.innerHTML = `${perimetroTriangulo}cm`;
+    resultadoTriangulo.innerHTML = `<span>${perimetroTriangulo}cm</span>`;
   } else {
     resultadoTriangulo.innerHTML = `Missing data 😕`;
   }
@@ -68,7 +68,7 @@ function mostrarAreaTriangulo() {
       Number(inputBaseTriangulo.value)
     );
     areaTriangulo = redondeoAlCentesimo(areaTriangulo);
-    resultadoTriangulo.innerHTML = `${areaTriangulo}cm<sup>2</sup>`;
+    resultadoTriangulo.innerHTML = `<span>${areaTriangulo}cm<sup>2</sup></span>`;
   } else {
     resultadoTriangulo.innerHTML = `Missing data 😕`;
   }
@@ -88,7 +88,7 @@ function mostrarPerimetroCirculo() {
     let perimetroCirculo = calcularPerimetroCirculo(inputRadioCirculo.value);
     perimetroCirculo = redondeoAlCentesimo(perimetroCirculo);
     console.log(perimetroCirculo);
-    resultadoCirculo.innerHTML = `${perimetroCirculo}cm`;
+    resultadoCirculo.innerHTML = `<span>${perimetroCirculo}cm</span>`;
   } else {
     resultadoCirculo.innerHTML = `Missing data 😕`;
   }
@@ -97,7 +97,7 @@ function mostrarAreaCirculo() {
   if (inputRadioCirculo.value != 0) {
     let areaCirculo = calcularAreaCirculo(inputRadioCirculo.value);
     areaCirculo = redondeoAlCentesimo(areaCirculo);
-    resultadoCirculo.innerHTML = `${areaCirculo}cm<sup>2</sup>`;
+    resultadoCirculo.innerHTML = `<span>${areaCirculo}cm<sup>2</sup></span>`;
   } else {
     resultadoCirculo.innerHTML = `Missing data 😕`;
   }
