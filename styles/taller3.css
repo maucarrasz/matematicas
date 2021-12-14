@@ -29,7 +29,7 @@ header {
   margin-left: 12px;
 }
 .logo {
-  width: 44px;
+  width: 36px;
   margin-right: 12px;
 }
 
@@ -40,7 +40,6 @@ header {
 
 header ul {
   display: flex;
-  margin: 0 10px;
   font-size: 1.6rem;
   list-style: none;
 }
@@ -120,14 +119,10 @@ main .box-content {
   align-items: center;
 }
 .group-container {
-  width: 98%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 12px;
-}
-.group-left {
-  margin-right: 12px;
 }
 
 .label-input-container {
@@ -201,6 +196,8 @@ input[type="number"] {
 
 .answer-container {
   width: 100%;
+  min-width: 270px;
+  max-width: 580px;
   height: 80px;
   border: 3px solid black;
   border-radius: 5px;
@@ -261,7 +258,7 @@ footer {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   .logo {
     height: 44px;
   }
@@ -269,13 +266,24 @@ footer {
     font-size: 4rem;
   }
   .group-container {
+    width: 100%;
     justify-content: space-between;
   }
+  .group-left {
+    margin-right: 12px;
+  }
+
   .btn-container {
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-height: 600px) {
+  footer {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 768px) {
   footer {
     position: absolute;
     bottom: 0;

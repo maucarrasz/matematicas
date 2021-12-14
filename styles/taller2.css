@@ -34,7 +34,7 @@ header {
   margin-left: 12px;
 }
 .logo {
-  width: 40px;
+  width: 32px;
   margin-right: 12px;
 }
 
@@ -45,7 +45,6 @@ header {
 
 header ul {
   display: flex;
-  margin: 0 10px;
   font-size: 1.6rem;
   list-style: none;
 }
@@ -71,12 +70,11 @@ header li a:hover {
 
 main {
   width: 100%;
-  height: calc(100vh - 100px);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 12px;
-  margin: 0 auto;
+  margin: 10px auto 200px;
   font-size: 1.7rem;
 }
 
@@ -233,7 +231,13 @@ footer {
     margin: 20px auto;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-height: 600px) {
+  footer {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 768px) {
   footer {
     position: absolute;
     bottom: 0;

@@ -34,16 +34,15 @@ header {
 }
 
 .logo-container p {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-family: "Rakkas", cursive;
 }
 .logo {
-  width: 80px;
+  width: 56px;
 }
 
 header ul {
   display: flex;
-  margin: 0 10px;
   font-size: 1.6rem;
   list-style: none;
 }
@@ -73,13 +72,14 @@ main {
 }
 
 .sections-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-flow: row wrap;
   position: relative;
+  margin-top: 20px;
 }
 
 .section {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
@@ -93,9 +93,12 @@ main {
 .section h2 {
   width: 132px;
   margin-bottom: 30px;
-  padding: 0 15px;
-  border-bottom: 3px solid black;
-  font-size: 2.8rem;
+
+  padding: 6px 15px;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-size: 2.6rem;
+
   font-family: "Rakkas", cursive;
   text-align: center;
 }
@@ -208,8 +211,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 0;
+  position: relative;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
   border-top: 2px solid rgba(0, 0, 0, 0.2);
@@ -227,45 +229,41 @@ footer {
   text-decoration: none;
 }
 
-@media screen and (max-width: 799px) {
-  .logo-container p {
-    font-size: 1.9rem;
+@media screen and (min-width: 600px) {
+  .logo {
+    width: 80px;
   }
   .sections-container {
-    display: flex;
-    flex-flow: row wrap;
+    margin: 0;
   }
   .section {
     width: 50%;
+  }
+  .section h2 {
+    padding: 0 15px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid black;
+    font-size: 2.8rem;
+  }
+}
+@media screen and (min-width: 850px) {
+  .logo-container p {
+    font-size: 2.6rem;
+  }
+  .sections-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section {
+    width: 100%;
   }
   .section__image {
     width: 140px;
     height: 140px;
   }
   footer {
-    position: relative;
-  }
-}
-@media screen and (max-width: 600px) {
-  header {
-    padding: 0;
-  }
-  header ul {
-    margin: 0;
-  }
-  .logo {
-    width: 56px;
-  }
-  .sections-container {
-    margin-top: 20px;
-  }
-  .section {
-    width: 100%;
-  }
-  .section h2 {
-    font-size: 2.6rem;
-    padding: 6px 15px;
-    border: 3px solid black;
-    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
   }
 }
