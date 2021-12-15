@@ -1,18 +1,18 @@
+const resetButton = document.getElementById("btn-reset");
+resetButton.addEventListener("click", reset);
+
 function reset() {
   const inputAmount = document.getElementById("input-amount");
   const inputInterest = document.getElementById("input-interest");
   const inputTime = document.getElementById("input-time");
   const inputTypeInterest = document.getElementById("type-interest");
   const textResultado = document.getElementById("answer");
-  let montoValue = inputAmount.value;
-  let interesValue = inputInterest.value;
-  let tiempoValue = inputTime.value;
-  let tipoInteresValue = inputTypeInterest.value;
 
-  montoValue = "";
-  interesValue = "";
-  tiempoValue = "";
-  tipoInteresValue = "simple";
+  inputAmount.value = "";
+  inputInterest.value = "";
+  inputTime.value = "";
+  inputTypeInterest.value = "simple";
+  textResultado.innerHTML = "Final investment";
 }
 
 // Logica :D

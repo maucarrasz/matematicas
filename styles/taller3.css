@@ -302,7 +302,6 @@ input[type="number"] {
 .answer-text span {
   font-size: 110%;
   font-weight: bold;
-  border-bottom: 2px solid black;
 }
 
 footer {

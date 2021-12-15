@@ -229,12 +229,13 @@ main {
   margin-bottom: 5px;
 }
 .input-container input {
+  width: 190px;
   color: black;
   font-size: 1.4rem;
   border: 2px solid black;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.4);
-  padding: 4px 8px;
+  padding: 4px 12px;
   margin-bottom: 5px;
 }
 .input-container .input-cuadrado,
@@ -244,9 +245,7 @@ main {
 }
 
 ::placeholder {
-  color: black;
-  position: relative;
-  left: 10px;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .input-container__triangulo {
