@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -17,8 +18,13 @@ a {
 header {
   width: 100%;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 2px 5px -3px rgba(0, 0, 0, 0.2);
 }
 header nav {
@@ -31,11 +37,19 @@ header nav {
   height: 100%;
   margin: 0 auto;
   padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -50,19 +64,31 @@ header nav {
 }
 
 header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   list-style: none;
 }
 header ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   list-style: none;
 }
 .navbar__left,
 .navbar__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
@@ -72,6 +98,7 @@ header ul li {
 }
 .navbar__right ul a {
   height: 100%;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   padding: 0 20px;
@@ -97,8 +124,15 @@ header ul li {
 .menu-mobile {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   margin: 0 auto;
   border-bottom-right-radius: 20px;
@@ -125,7 +159,11 @@ header ul li {
 .menu-mobile ul li a {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 20px 40px;
   color: black;
@@ -154,8 +192,14 @@ header ul li {
 
 main {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 1.7rem;
   margin: 20px auto;
@@ -172,9 +216,18 @@ main .box {
 }
 main .box-content {
   margin: 130px 50px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -189,8 +242,14 @@ main .box-content {
   background-color: #0000004d;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .box-content .title-text {
@@ -200,20 +259,39 @@ main .box-content {
 }
 
 .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .group-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   margin-bottom: 12px;
 }
 
 .label-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 
@@ -243,22 +321,49 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+::-webkit-input-placeholder {
+  font-size: 1.5rem;
+}
+
+::-moz-placeholder {
+  font-size: 1.5rem;
+}
+
+:-ms-input-placeholder {
+  font-size: 1.5rem;
+}
+
+::-ms-input-placeholder {
+  font-size: 1.5rem;
+}
+
 ::placeholder {
   font-size: 1.5rem;
 }
 
 .btn-container {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
 .btn {
   min-width: 240px;
   max-width: 290px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 45px;
   color: black;
@@ -290,8 +395,16 @@ input[type="number"] {
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.1);
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .answer-text {
@@ -307,8 +420,14 @@ input[type="number"] {
 footer {
   width: 100%;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   position: relative;
   color: #fff;
@@ -350,6 +469,8 @@ footer {
 
 @media screen and (min-width: 600px) {
   .navbar__right ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .menu-icon {
@@ -367,6 +488,8 @@ footer {
   }
   .group-container {
     width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .group-left {
@@ -374,6 +497,8 @@ footer {
   }
 
   .btn-container {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 }

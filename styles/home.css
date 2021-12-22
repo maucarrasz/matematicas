@@ -1,4 +1,5 @@
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,15 +19,28 @@ a {
 header {
   width: 100%;
   height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0;
   padding: 0 1rem;
 }
 .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .logo {
@@ -39,6 +53,8 @@ header {
 }
 
 header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 10px;
   font-size: 1.6rem;
@@ -53,10 +69,20 @@ header ul li {
 /* Animation - appear vertical line */
 header ul li a {
   text-decoration: none;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(currentColor),
+    to(currentColor)
+  );
+  background-image: -o-linear-gradient(currentColor, currentColor);
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
+  -webkit-transition: background-size 0.3s;
+  -o-transition: background-size 0.3s;
   transition: background-size 0.3s;
   padding-bottom: 4px;
 }
@@ -67,6 +93,7 @@ header li a:hover {
 .main-container {
   width: 100%;
   height: calc(100vh - 100px);
+  display: -ms-grid;
   display: grid;
   place-items: center;
   padding: 0 20px;
@@ -74,6 +101,7 @@ header li a:hover {
 .projects-container {
   width: 100%;
   height: 100%;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -82,6 +110,7 @@ header li a:hover {
   width: 100%;
   max-width: 600px;
   height: 100px;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   background: rgba(0, 0, 0, 0.8);
@@ -94,7 +123,12 @@ header li a:hover {
 }
 
 .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   font-family: "Rakkas", cursive;
   font-size: 2.4rem;
@@ -108,8 +142,14 @@ header li a:hover {
 footer {
   width: 100%;
   height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: #f2f0f0;
   background: rgba(0, 0, 0, 0.8);
@@ -133,6 +173,9 @@ footer {
     font-size: 3.2rem;
   }
   .text {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
     font-size: 2.8rem;
   }
