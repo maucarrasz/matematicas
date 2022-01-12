@@ -6,7 +6,7 @@
 }
 html {
   font-size: 62.5%;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Rakkas", cursive;
 }
 body {
   background: #f2f0f0;
@@ -49,7 +49,6 @@ header {
 
 .logo-container p {
   font-size: 2.8rem;
-  font-family: "Rakkas", cursive;
 }
 
 header ul {
@@ -113,12 +112,14 @@ header li a:hover {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
   border: 1px solid transparent;
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  outline: none;
 }
-.c:hover {
+.c:hover,
+.c:focus {
   background: rgba(0, 0, 0, 0.6);
 }
 
@@ -130,7 +131,6 @@ header li a:hover {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: "Rakkas", cursive;
   font-size: 2.4rem;
   text-align: center;
 }
@@ -158,7 +158,6 @@ footer {
 
 .author {
   font-size: 1.6rem;
-  font-family: "Rakkas", cursive;
 }
 .author a {
   text-decoration: underline;

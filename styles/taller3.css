@@ -59,6 +59,7 @@ header nav {
 }
 .logo {
   width: 44px;
+  height: 44px;
   border-radius: 50%;
   margin-right: 12px;
 }
@@ -114,9 +115,15 @@ header ul li {
 }
 
 .menu-icon {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
   padding-right: 20px;
   cursor: pointer;
+}
+.menu-icon img {
+  width: 25px;
+  height: 25px;
 }
 
 /* MENU MOBILE STYLES */
@@ -356,6 +363,7 @@ input[type="number"] {
 .btn {
   min-width: 240px;
   max-width: 290px;
+  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -365,24 +373,27 @@ input[type="number"] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 45px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
   color: black;
   font-size: 1.7rem;
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.1);
-  border: 1px solid black;
-  border-radius: 20px;
   cursor: pointer;
-  margin-bottom: 20px;
+  outline: none;
 }
-.btn-calculate:hover {
+.btn-calculate:hover,
+.btn-calculate:focus {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
   border: none;
 }
-.btn-reset:hover {
+.btn-reset:hover,
+.btn-reset:focus {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
+  border: none;
   border-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -479,6 +490,7 @@ footer {
 
   .logo {
     width: 48px;
+    height: 48px;
   }
 }
 

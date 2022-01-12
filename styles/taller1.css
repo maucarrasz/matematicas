@@ -50,6 +50,7 @@ header nav {
   justify-content: space-between;
 }
 .logo-container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,6 +65,7 @@ header nav {
 }
 .logo {
   width: 56px;
+  height: 56px;
 }
 
 header ul {
@@ -121,8 +123,15 @@ header ul li {
 }
 
 .menu-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
   padding-right: 20px;
   cursor: pointer;
+}
+.menu-icon img {
+  width: 25px;
+  height: 25px;
 }
 
 /* MENU MOBILE STYLES */
@@ -345,7 +354,8 @@ main {
   border-radius: 20px;
   outline: none;
 }
-.btn-container button:hover {
+.btn-container button:hover,
+.btn-container button:focus {
   color: #fff;
   border-color: rgba(0, 0, 0, 0.1);
   background-color: rgba(0, 0, 0, 0.8);
@@ -434,6 +444,7 @@ footer {
 
   .logo {
     width: 60px;
+    height: 60px;
   }
   .section {
     width: 50%;
