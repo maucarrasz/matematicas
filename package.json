@@ -1,0 +1,12 @@
+{
+  "name": "matematicas",
+  "version": "2.0.0",
+  "description": "Basic maths with Javascript",
+  "main": "src/index.html",
+  "scripts": {},
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Mauricio Carrasco <estoicodev@gmail.com>",
+  "license": "MIT"
+}

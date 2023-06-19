@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyect 1 | Geometric figures</title>
+    <link rel="shortcut icon" href="../images/operations_maths.svg" />
+    <link rel="stylesheet" href="../assets/css/taller1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rakkas&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="menu-mobile hidden">
+      <button>
+        <img
+          src="../images/icon_close.png"
+          alt="Close icon"
+          class="menu__close-icon"
+          id="menu-close-icon"
+        />
+      </button>
+      <ul>
+        <li class="menu__title">PROJECTS</li>
+        <li class="menu-item menu__category">
+          <a href="./taller1.html">Geometric Figures</a>
+        </li>
+        <li class="menu-item menu__category">
+          <a href="./taller2.html">Discounted Prices</a>
+        </li>
+        <li class="menu-item menu__category">
+          <a href="./taller3.html">UInvestment</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <nav>
+        <div class="navbar-list" id="navbar-list">
+          <div class="navbar__left">
+            <div class="logo-container">
+              <img
+                src="../images/logo-figuras.jpg"
+                alt="Geometric icon"
+                class="logo"
+              />
+              <p>GeoFigures</p>
+            </div>
+          </div>
+          <div class="navbar__right">
+            <ul>
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <a href="./taller1.html">P1</a>
+              </li>
+              <li>
+                <a href="./taller2.html">P2</a>
+              </li>
+              <li>
+                <a href="./taller3.html">P3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-icon" id="menu-icon">
+            <img src="../images/icon_menu.svg" alt="menu icon" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="sections-container">
+        <section class="section section-cuadrado">
+          <h2>Square</h2>
+          <img
+            class="section__image"
+            src="../images/square.png"
+            alt="Square Image"
+          />
+          <form class="input-btn-container input-btn-container--cuadrado">
+            <div class="input-container">
+              <input
+                id="lado-cuadrado"
+                class="input-cuadrado"
+                type="number"
+                placeholder="Side"
+              />
+            </div>
+            <div class="btn-container">
+              <button id="calcular-perimetro-cuadrado" type="button">
+                Perimeter
+              </button>
+              <button id="calcular-area-cuadrado" type="button">Area</button>
+            </div>
+          </form>
+          <div class="answer-container">
+            <p id="respuesta-cuadrado">Final Score</p>
+          </div>
+        </section>
+        <section class="section section-triangulo">
+          <h2>Triangle</h2>
+          <img
+            class="section__image"
+            src="../images/triangle.png"
+            alt="triangle image"
+          />
+          <form class="input-btn-container">
+            <div class="input-container input-container__triangulo">
+              <input id="lado1-triangulo" type="number" placeholder="Side 1" />
+              <input id="lado2-triangulo" type="number" placeholder="Side 2" />
+              <input id="base-triangulo" type="number" placeholder="Side 3" />
+            </div>
+            <div class="btn-container">
+              <button id="calcular-perimetro-triangulo" type="button">
+                Perimeter
+              </button>
+              <button id="calcular-area-triangulo" type="button">Area</button>
+            </div>
+          </form>
+          <div class="answer-container answer-container--triangulo">
+            <p id="respuesta-triangulo">Final Score</p>
+          </div>
+        </section>
+        <section class="section section-circulo">
+          <h2>Circle</h2>
+          <img
+            class="section__image"
+            src="../images/circle.png"
+            alt="circle image"
+          />
+          <form class="input-btn-container input-btn-container--circulo">
+            <div class="input-container">
+              <input
+                id="radio-circulo"
+                class="input-circulo"
+                type="number"
+                placeholder="Radio"
+              />
+            </div>
+            <div class="btn-container">
+              <button id="calcular-perimetro-circulo" type="button">
+                Perimeter
+              </button>
+              <button id="calcular-area-circulo" type="button">Area</button>
+            </div>
+          </form>
+          <div class="answer-container">
+            <p id="respuesta-circulo">Final Score</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="author">
+        Designed by
+        <a href="https://github.com/estoicodev">@estoicodev</a> with 💚
+      </div>
+    </footer>
+    <script src="../assets/js/menuMobile.js"></script>
+    <script type="module" src="../assets/js/math.mjs"></script>
+    <script type="module" src="../assets/js/taller1.mjs"></script>
+  </body>
+</html>
