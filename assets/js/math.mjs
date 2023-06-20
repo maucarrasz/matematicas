@@ -39,15 +39,8 @@ class Triangle {
     return (this.side1 + this.side2 + this.side3) / 2;
   }
   calculateArea() {
-    return Math.sqrt(
-      this.calculateSemiPerimeter(this.side1, this.side2, this.side3) *
-        (this.calculateSemiPerimeter(this.side1, this.side2, this.side3) -
-          this.side1) *
-        (this.calculateSemiPerimeter(this.side1, this.side2, this.side3) -
-          this.side2) *
-        (this.calculateSemiPerimeter(this.side1, this.side2, this.side3) -
-          this.side3)
-    );
+    const sp = this.calculateSemiPerimeter();
+    return (sp * (sp - side1) * (sp - side2) * (sp - side3)) ** 0.5;
   }
   get perimeter() {
     let per = this.calculatePerimeter();
